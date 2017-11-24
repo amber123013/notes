@@ -1,0 +1,45 @@
+jupyter notebook --generate-config //查询配置文件地址
+如果该配置文件不存在，那么，将会初始化产生一个配置文件
+# The directory to use for notebooks and kernels.
+c.NotebookApp.notebook_dir = u'D:\Jupyter' //修改默认工作空间
+
+shift + 鼠标右键 #  在此处打开命令窗口
+
+快捷键
+shift+enter 执行当前cell 并跳到下一个cell
+alt + enter 执行当前cell 并在其下插入一个cell
+ctrl+enter 执行当前cell 不跳到下一个
+enter 当前cell进入编辑模式
+esc   退出当前cell编辑模式
+双d   非编辑状态下删除当前cell
+L     为当前cell加上line number
+1 or 2 or 3 or 4 or 5 or 6 将当前cell 装换成markdown(1-6级标题)
+ctrl /  添加、取消注释
+z      撤销对某个cell的删除
+ctrl + tab(pgup、pgdn)  网页table间的切换
+
+%magic 查看魔术命令
+将一个文件中的代码导入到一个cell中
+在需要导入的cell中输入下面代码后 执行
+%load test.py #test.py是当前路径下的一个python文件
+从网络load 代码到jupyter
+在cell中输入 %road http://...  执行该cell
+
+使用jupyter 运行python 文件
+%run file.py  #结果会显示在该cell下
+
+jupyter 的 cell 可以作为unix command 使用
+具体方法为：在unitx command前面加入一个感叹号 ！
+查看python版本：!python --version
+运行python文件：!python myfile.py
+
+current_path = %pwd
+print(current_path)
+执行此段代码得到当前工作路径的字符串
+
+在一个库，方法或变量前加上 ?，你可以获得它的一个快速语法说明。
+?abs
+
+对于计时有两个十分有用的魔法命令：%%time 和 %timeit. 如果你有些代码运行地十分缓慢，而你想确定是否问题出在这里，这两个命令将会非常方便。
+%%time 将会给出cell的代码运行一次所花费的时间。
+%timeit 使用Python的timeit模块，它将会执行一个语句100，000次(默认情况下)，然后给出运行最快3次的平均值。
