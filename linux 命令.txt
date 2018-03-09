@@ -1,0 +1,13 @@
+wget -bc url   // -c 断点续传 -b后台下载
+tail -f catalina.out  //实时查看catalina.out最后的内容
+    -f 循环读取
+    -q 不显示处理信息
+    -v 显示详细的处理信息
+    -c<数目> 显示的字节数
+    -n<行数> 显示行数
+start nginx 启动nginx
+nginx -s stop  关闭
+nginx -s reload  重启
+ ps -ef | grep  nginx
+netstat -ntpl
+/etc/nginx/sites-enabled/
